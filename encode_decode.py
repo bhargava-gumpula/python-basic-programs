@@ -1,4 +1,4 @@
-def encode(key): 
+def encode(key):
     encoded_str = ""
     for char in key:
         ascii_chr = ord(char)
@@ -24,4 +24,4 @@ def main():
               (key, encoded_str, decoded_str)
 
 if __name__ == "__main__":
-    main()    
+    main()
