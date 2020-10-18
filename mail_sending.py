@@ -1,4 +1,5 @@
 import smtplib
+import sys
 
 # Before running this progam, you must go to the gmail manage account
 # and in security section, enable less secure apps to log in to gmail account
@@ -13,13 +14,17 @@ def send_email(recipient, subject, text):
     smtpserver.ehlo()
     smtpserver.starttls()
     smtpserver.ehlo()
-    smtpserver.login(GMAIL_USER, GMAIL_PASS)
 
-    header = 'To:' + recipient + '\n' + 'From: ' + GMAIL_USER
-    header += '\n' + 'Subject:' + subject + '\n'
-    msg = header + '\n' + text + ' \n\n'
-    smtpserver.sendmail(GMAIL_USER, recipient, msg)
-    smtpserver.close()
+    try:
+      smtpserver.login(GMAIL_USER, GMAIL_PASS)
 
-send_email('gsuryacse7k@gmail.com', 'Hello', '''Hi bhagha bee, 
-                                                  are you hear?''')
+      header = 'To:' + recipient + '\n' + 'From: ' + GMAIL_USER
+      header += '\n' + 'Subject:' + subject + '\n'
+      msg = header + '\n' + text + ' \n\n'
+      smtpserver.sendmail(GMAIL_USER, recipient, msg)
+      smtpserver.close()
+    except:
+      print("Login issues with gmail")
+
+send_email(sys.argv[1], sys.argv[2], sys.argv[3])
+
