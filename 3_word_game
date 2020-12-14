@@ -1,0 +1,17 @@
+words = []
+
+while True:
+    new = raw_input("Enter a 3-letter word:")
+    if len(new) != 3:
+       print("That's not a 3-letter word")
+    else:
+       if new in words:
+          print("You already entered that word")
+          print("You know " + str(len(words)) + " words")
+          break
+       else: 
+          print("Nice one")
+          words.append(new)
+
+
+
