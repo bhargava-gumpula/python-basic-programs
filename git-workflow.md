@@ -26,6 +26,11 @@ example : git push origin HEAD:<branch_name>
 
 Step 8) go to github UI from web and you will have to add reviwers and merge the branch to master in the web UI itself
 
+Step 9) delete branch in UI. switch to master branch and delete pushed branch. Then use git pull on master branch to keep it up to date
+example : git checkout master
+	  git branch -D <branch_name>
+	  git pull  
+
 Additional commands
 ===================
 
