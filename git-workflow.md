@@ -24,16 +24,18 @@ Step 7) All committed files needs to be pushed to remote repo using git push;
 git push <remote_URL/remote_name> <branch> | This is to push any changes made in the local branch to remote repo
 example : git push origin master
 
+Step 8) go to github UI from web and you will have to add reviwers and merge the branch to master in the web UI itself
+
 Additional commands
 ===================
 
-Step 8) git pull <branch_name> <remote_URL/remote_name> | This is to recive any changes made in the remote branch that you do not have in your local
+Step 1) git pull <branch_name> <remote_URL/remote_name> | This is to recive any changes made in the remote branch that you do not have in your local
 example: >>> git pull origin master
 
-Step 9) git status | This is to check if you are up to date with the branch you are in. If you are not, then it will tell you what files are not updated.
+Step 2) git status | This is to check if you are up to date with the branch you are in. If you are not, then it will tell you what files are not updated.
 
 
-Step 10) git branch ; shows in which branch you are currently in. Or can be used to create a new branch
+Step 3) git branch ; shows in which branch you are currently in. Or can be used to create a new branch
 example : git branch
 example : git branch <branch_name>
 
