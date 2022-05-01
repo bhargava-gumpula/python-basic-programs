@@ -22,7 +22,7 @@ Step 6) Now switch to the new branch you created above
 
 Step 7) All committed files needs to be pushed to remote repo using git push;
 git push <remote_URL/remote_name> <branch> | This is to push any changes made in the local branch to remote repo
-example : git push origin master
+example : git push origin HEAD:<branch_name>
 
 Step 8) go to github UI from web and you will have to add reviwers and merge the branch to master in the web UI itself
 
