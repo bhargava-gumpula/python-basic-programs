@@ -1,13 +1,13 @@
 def fibonocci(x,y,n):
     sequence = []
-    for i in range(n):
-        if x >= n:
-            break
-        else:
-            sequence.append(x)
-            sequence.append(y)
-            x = x + y
-            y = x + y
+    while y < n:
+    	sequence.append(x)
+    	sequence.append(y)
+    	x = x + y
+    	y = x + y
+
+    if x < n:
+        sequence.append(x)		
     print (sequence)
 
 input1 = input("What is the first number in sequence(usually 0) : ")
