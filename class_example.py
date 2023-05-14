@@ -1,9 +1,35 @@
-import custom_functions as cf
+class Things:
+	pass
 
-e1 = cf.employee("Bhargava", 9)
-e1.cf.print_name()
-e1.cf.print_age()
-e2 = cf.employee("Suresh", 40)
-e2.cf.print_name()
-e2.cf.print_age()
+class Inanimate(Things):
+	pass
 
+class Sidewalk(Inanimate):
+	pass
+
+class Animate(Things):
+	pass
+
+class Animals(Animate):
+	def breathe(self):
+		print("breathing")
+	def move(self):
+		print('moving')
+	def eat_food(self):
+		print("eating food")
+
+class Mammals(Animals):
+	def feed_young_with_milk(self):
+		print("feeding young")
+
+class Giraffes(Mammals):
+	def eat_leaves_from_trees(self):
+		print("eating leaves")
+
+
+reginald = Giraffes()
+reginald.move()
+reginald.eat_leaves_from_trees()
+
+harold = Giraffes()
+harold.move()
