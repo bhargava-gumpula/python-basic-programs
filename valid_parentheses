@@ -1,0 +1,33 @@
+str = input("Enter a series of parentheses : ")
+valid = False
+
+for x in range(0,len(str),2):
+	if len(str)%2 == 1:
+		break
+	if str[x] == "(":
+                if str[x+1] == ")":
+                        valid = True
+                        continue
+                else:
+                        valid = False
+                        break
+              
+
+	if str[x] == "[":
+                if str[x+1] == "]":
+                        valid = True
+                        continue
+                else:
+                        valid = False
+                        break
+                
+	if str[x] == "{":
+                if str[x+1] == "}":
+                        valid = True
+                        continue
+                else:
+                        valid = False
+                        break
+                
+
+print(valid)
